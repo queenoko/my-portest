@@ -22,7 +22,7 @@ class HomeController extends Controller
             [
                 'title' => 'title three',
                 'body' => 'this is body text',
-                'status' => 0
+                'status' => 1
             ],
             [
                 'title' => 'title four',
