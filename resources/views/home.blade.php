@@ -9,6 +9,16 @@
   esse, repudiandae, adipisci non placeat.
 
   <div class="row mt-5">
+    @foreach ($blogs as $blog)
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h2>Heading</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia, animi.</p>
+          </div>
+        </div>
+      </div>
+    @endforeach
 
   </div>
 </main>
