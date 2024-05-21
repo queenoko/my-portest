@@ -9,7 +9,8 @@
   esse, repudiandae, adipisci non placeat.
 
   <div class="row mt-5">
-    @for ($i = 0; $i < count($blogs); $i++)
+    @foreach($blogs as blog)
+    @if ($blog['status'] == 1)
       <div class="col-md-4">
         <div class="card">
           <div class="card-body">
@@ -18,7 +19,8 @@
           </div>
         </div>
       </div>
-    @endfor
+    @endif
+    @endforeach
 
   </div>
 </main>
