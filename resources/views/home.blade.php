@@ -9,16 +9,16 @@
   esse, repudiandae, adipisci non placeat.
 
   <div class="row mt-5">
-    @foreach ($blogs as $blog)
+    @for ($i = 0; $i < count($blogs); $i++)
       <div class="col-md-4">
         <div class="card">
           <div class="card-body">
-            <h2>Heading</h2>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia, animi.</p>
+            <h2>{{$blogs[$i]['title']}}</h2>
+            <p>{{$blogs[$i]['body']}}</p>
           </div>
         </div>
       </div>
-    @endforeach
+    @endfor
 
   </div>
 </main>
