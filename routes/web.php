@@ -26,14 +26,5 @@ Route::get('/home', HomeController::class);
 
 Route::get('/login', [LoginController::class, 'index']);
 
-// Route::get('about', [AboutController::class, 'index'])->name('about');
-
-// Route::get('contact', [ContactController::class, 'index'])->name('contact');
-
-// Route::resource('blog', BlogController::class);
-
-// Route::get('contact', function () {
-//     return view('contact');
-// });
-
+// CSRF Token
 
