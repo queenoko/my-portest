@@ -24,7 +24,9 @@ Route::get('/', function () {
 
 Route::get('/home', HomeController::class);
 
-Route::get('/login', [LoginController::class, 'index']);
+Route::get('/login', [LoginController::class, 'index'])->name('login');
+
+Route::post('/login', [LoginController::class, 'handleLogin'])->name('login.submit');
 
 // CSRF Token
 
