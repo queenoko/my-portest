@@ -12,7 +12,7 @@ class HomeController extends Controller
      */
     public function __invoke(Request $request)
     {
-        DB::table('posts')->delete(53);
+        DB::table('posts')->Where('id', 52)->delete();
 
         dd('success');
         
