@@ -12,9 +12,7 @@ class HomeController extends Controller
      */
     public function __invoke(Request $request)
     {
-        DB::table('posts')->where('id', 52)->update([
-            'title' => 'hey we update title'
-        ]);
+        DB::table('posts')->delete(53);
 
         dd('success');
         
