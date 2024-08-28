@@ -12,8 +12,12 @@ class HomeController extends Controller
      */
     public function __invoke(Request $request)
     {
-        return DB::table('posts')->pluck('title', 'id');
-        return view('home', compact('blogs'));
+        DB::table('posts')->where('id', 52)->update([
+            'title' => 'hey we update title'
+        ]);
+
+        dd('success');
+        
     }
     
 }
