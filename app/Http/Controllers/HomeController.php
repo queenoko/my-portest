@@ -13,7 +13,18 @@ class HomeController extends Controller
      */
     public function __invoke(Request $request)
     {
-       return $posts = Post::all();
+       $post = new Post();
+
+       $post->title = 'post 4';
+       $post->description = 'This is a description test';
+       $post->status = 1;
+       $post->publish_date = date('Y-m-d');
+       $post->user_id = 1;
+       $post->category_id = 1;
+       $post->views = 400;
+
+       $post->save();
+       dd('success');
     }
     
 }
