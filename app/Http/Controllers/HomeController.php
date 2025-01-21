@@ -10,20 +10,15 @@ class HomeController extends Controller
 {
     /**
      * Handle the incoming request.
+     * @param \Illuminate\Http\Request $request
+     * @return \Illuminate\Http\Response
      */
     public function __invoke(Request $request)
     {
-       $post = Post::create([
-        'title' => 'This is mass assignment',
-        'description' => 'This is description for mass assignment',
-        'status' => 1,
-        'publish_date' => date('Y-m-d'),
-        'user_id' => 1,
-        'category_id' => 2,
-        'views' => 500
-       ]);
+        return Post::all();
+        // Post::where('id', 4)->delete();
 
-       dd('success');
+        // dd('success');
     }
     
 }
