@@ -19,4 +19,14 @@ class Post extends Model
         'category_id',
         'views'
     ];
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
+
+    public function tags()
+    {
+        return $this->belongsTo(Tag::class);
+    }
 }
