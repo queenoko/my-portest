@@ -15,12 +15,7 @@ class HomeController extends Controller
      */
     public function __invoke(Request $request)
     {
-        //Post::withTrashed()->find(2)->forceDelete();
-        //Post::withTrashed()->find(4)->restore();
-        //return Post::onlyTrashed()->get();
-        //Post::where('id', 2)->delete();
-        //return Post::all();
-        //dd('success');
+        return view('home');
     }
     
 }
