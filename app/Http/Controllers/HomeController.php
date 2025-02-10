@@ -18,8 +18,8 @@ class HomeController extends Controller
     public function __invoke(Request $request)
     {
         //Storage::delete('/image_test.jpg');
-        unlink(storage_path('/app/public/images/new_image.jpg'));
-        //return view('home');
+        //unlink(storage_path('/app/public/images/new_image.jpg'));
+        return view('home');
     }
     
 }
