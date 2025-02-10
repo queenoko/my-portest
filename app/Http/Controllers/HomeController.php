@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Post;
 use DB;
 use Illuminate\Http\Request;
+use Storage;
+use File;
 
 class HomeController extends Controller
 {
@@ -15,7 +17,9 @@ class HomeController extends Controller
      */
     public function __invoke(Request $request)
     {
-        return view('home');
+        //Storage::delete('/image_test.jpg');
+        unlink(storage_path('/app/public/images/new_image.jpg'));
+        //return view('home');
     }
     
 }
