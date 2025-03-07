@@ -14,5 +14,7 @@ class ImageController extends Controller
         ]);
 
         $request->image->storeAs('/images', 'new_image.jpg');
+
+        return redirect('/success');
     }
 }

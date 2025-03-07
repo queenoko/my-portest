@@ -19,7 +19,10 @@ class HomeController extends Controller
     {
         //Storage::delete('/image_test.jpg');
         //unlink(storage_path('/app/public/images/new_image.jpg'));
-        return view('home');
+        //return view('home');
+        $posts = Post::all();
+
+        return response($posts); //json file
     }
     
 }
